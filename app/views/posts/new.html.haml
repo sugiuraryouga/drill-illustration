@@ -1,0 +1,14 @@
+ .chat-main__form
+  = form_for [@group, @message],html: {class:"chat-main__form__new"} do |f|
+   .chat-main__form__new__form-box
+    = f.text_field :content, class: 'chat-main__form__new__form-box__input', placeholder: 'type a message'
+    = f.label :image, class: 'chat-main__form__new__form-box__input__label' do
+     = icon('fas', 'image', class: 'icon')
+     = f.file_field :image, class: 'chat-main__form__new__form-box__input__label__image'
+    = f.label :category, 'カテゴリ'
+    = f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
+     = category.label do
+      = category.check_box
+      = category.title
+
+   = f.submit 'Send', class: 'chat-main__form__new__submit-btn'
