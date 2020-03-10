@@ -1,5 +1,12 @@
+
 .side_ber
- .side_ber__posts
-  .side_ber__posts__category
-   カテゴリー一覧
+  .side_ber__categorys
+    カテゴリー一覧
+    - @categorys.each do |category|
+      = link_to  "#",class:"side_ber__categorys__category" do
+        .side_ber__categorys__category__title
+          = "・#{category.title}"
+          
+    
+    
   

@@ -1,5 +1,9 @@
 class CategorysController < ApplicationController
+  def index
+   @categorys=Category.all
+  end
 
+  # ここ以下は管理者のみのadminにする
   def new
     @post = Category.new
   end

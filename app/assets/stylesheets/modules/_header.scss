@@ -1,0 +1,15 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 60px;
+  background-color: bisque;
+  line-height: 60px;
+  &__logo{
+    font-size: 30px;
+  }
+  &__right{
+    margin-right: 20px;
+  }
+  
+}

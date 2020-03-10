@@ -1,5 +1,0 @@
-= f.label :category, 'カテゴリ'
-= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
-  = category.label do
-    = category.check_box
-    = category.text

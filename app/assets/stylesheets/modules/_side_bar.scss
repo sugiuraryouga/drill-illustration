@@ -1,0 +1,25 @@
+.wrapper{
+  display: flex;
+}
+.fa{
+  display: inline-block;
+}
+.side_ber{
+  height: 100vh;
+  width: 300px;
+  background-color: #a59b9b;
+  &__categorys{
+    overflow: scroll;
+    margin: 10px auto;
+    color: white;
+    margin-top:20px;
+    &__category{
+      &__title{
+        font-size: 20px;
+        text-align: center;
+
+      }
+    }
+  }
+}
+
