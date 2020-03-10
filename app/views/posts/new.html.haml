@@ -1,14 +1,34 @@
- .chat-main__form
-  = form_for [@group, @message],html: {class:"chat-main__form__new"} do |f|
-   .chat-main__form__new__form-box
-    = f.text_field :content, class: 'chat-main__form__new__form-box__input', placeholder: 'type a message'
-    = f.label :image, class: 'chat-main__form__new__form-box__input__label' do
-     = icon('fas', 'image', class: 'icon')
-     = f.file_field :image, class: 'chat-main__form__new__form-box__input__label__image'
+.chat-main__form
+  = form_for [@post],html: {class:"chat-main__form__new"} do |f|
+    .chat-main__form__new__form-box
+      = f.label :title, 'タイトル'
+      = f.text_field :title,class:'chat-main__form__new__form-box__title', placeholder: 'title'
+      = f.label :content, '詳細'
+      = f.text_field :content, class: 'chat-main__form__new__form-box__content', placeholder: 'type a content'
+      = f.label :image, class: 'chat-main__form__new__form-box__input__label' do
+        = icon('fas', 'image', class: 'icon')
+      = f.file_field :image, class: 'chat-main__form__new__form-box__input__label__image'
     = f.label :category, 'カテゴリ'
-    = f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
-     = category.label do
-      = category.check_box
-      = category.title
-
-   = f.submit 'Send', class: 'chat-main__form__new__submit-btn'
+    %br
+    = f.collection_check_boxes(:category_ids, Category.all, :id, :title) do |category|\
+      = category.label do
+        = category.text
+        = category.check_box
+    %canvas#canvas{height: "500", style: "border: solid 1px #000;box-sizing: border-box;", width: "900"}
+    .option
+      .color
+        色：
+        %a.black{"data-color": "0, 0, 0, 1", href:""}
+        %a.red{"data-color": "255, 0, 0, 1", href:""}
+        %a.blue{"data-color": "0, 0, 255, 1", href: ""}
+      .bold
+        太さ：
+        %a.small{"data-bold": "1", href: ""} 小
+        %a.middle{"data-bold": "5",href: ""} 中
+        %a.large{"data-bold": "10", href: ""} 大
+    %input#clear{type: "button", value: "clear"}
+    %a.white#eraser-button{"data-color": "255, 255, 255, 255", href:""}部分消し
+    %a#download{download: "canvas.jpg", href: "#"} ダウンロード
+    #result
+    %img{src:  ""}/
+    = f.submit 'Send', class: 'chat-main__form__new__submit-btn'

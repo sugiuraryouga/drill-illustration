@@ -1,0 +1,18 @@
+
+  %canvas#canvas{:height => "300", :style => "border: solid 1px #000;box-sizing: border-box;", :width => "500"}
+  .option
+    .color
+      色：
+      %a.black{"data-color" => "0, 0, 0, 1", :href => ""}
+      %a.red{"data-color" => "255, 0, 0, 1", :href => ""}
+      %a.blue{"data-color" => "0, 0, 255, 1", :href => ""}
+    .bold
+      太さ：
+      %a.small{"data-bold" => "1", :href => ""} 小
+      %a.middle{"data-bold" => "5", :href => ""} 中
+      %a.large{"data-bold" => "10", :href => ""} 大
+  %input#clear{:type => "button", :value => "clear"}
+  %a#eraser-button{"data-color" => "255, 255, 255, １", href: "",value:"部分消し"}
+  %a#download{:download => "canvas.jpg", :href => "#"} ダウンロード
+  #result
+    %img{:src => ""}/
