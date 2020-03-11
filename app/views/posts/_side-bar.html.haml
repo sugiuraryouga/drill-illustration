@@ -3,10 +3,9 @@
   .side_ber__categorys
     カテゴリー一覧
     - @categorys.each do |category|
-      = link_to  "#",class:"side_ber__categorys__category" do
-        .side_ber__categorys__category__title
-          = "・#{category.title}"
+      = link_to category_path(category) ,class:"side_ber__categorys__category" do
+        .side_ber__categorys__category__titles
+          .side_ber__categorys__category__titles__title
+            = "・#{category.title}"
           
-    
-    
   

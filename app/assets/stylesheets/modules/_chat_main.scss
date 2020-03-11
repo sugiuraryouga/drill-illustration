@@ -1,3 +1,39 @@
 .chat-main{
   width: calc(100vw - 300px);
+  background-image: url("https://img.kb-cdn.com/imgviewer/NVpIM2ptOHhYRzVmUk5rM1NrNlFxYVV6enV4aGk2UFRJMmxPckdDUUVNWWVkdXJxbG8wL3MwQWlFNjdsbWhZZGk0VS9FRFpTRlFRTHM1TE01RTFGbUUzWGhWcXc5SWl3U0lsemVocDluU256eTU1UGlMcndxMFFSWHgvc2pBVk11T0llSWdpa3o5am9rSUpLNHdCZGFrUk1TeWNrbDJVcE4yeGkya1IvRTcwTFhBcnRQM0xDd0lwQnFrRkVhZVZXLzMrU1hiVGkzaG5XQmVBd1hvYTlvRjlUMlpDKzFvaGZSeUhTVUFwektkST0=?square=0");
+  background-size: cover;
+  padding-left: 20px;
+  &__image{
+    display: block;
+    margin:100px auto 0;
+    width: 500px;
+    height: 400px;
+  }
+  &__edit{
+    display: block;
+    &__form{
+      color:white;
+      font-size: 20px;
+    }
+  }
+  &__header{
+    color: white;
+  }
+  &__root{
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  &__main{
+    &__content{
+      color: white;
+    }
+    &__image{
+      &__font{
+      display: block;
+      margin-left: 20px;
+      }
+  }
+  
+  }
 }

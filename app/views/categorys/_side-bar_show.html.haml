@@ -1,0 +1,9 @@
+.side_ber
+ .side_ber__category
+  .side_ber__category__title
+   =@category.title
+  .side_ber__category__post
+   - @category.posts.each do |post|
+    = link_to  post_path(post) do
+     .side_ber__categorys__category__titles__post__title
+      =post.title

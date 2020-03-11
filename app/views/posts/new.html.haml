@@ -1,13 +1,14 @@
 .chat-main__form
-  = form_for [@post],html: {class:"chat-main__form__new"} do |f|
+  = form_with model: @post,html: {class:"chat-main__form__new"},local: true do |f|
     .chat-main__form__new__form-box
       = f.label :title, 'タイトル'
       = f.text_field :title,class:'chat-main__form__new__form-box__title', placeholder: 'title'
       = f.label :content, '詳細'
-      = f.text_field :content, class: 'chat-main__form__new__form-box__content', placeholder: 'type a content'
-      = f.label :image, class: 'chat-main__form__new__form-box__input__label' do
-        = icon('fas', 'image', class: 'icon')
+      = f.text_area :content, class: 'chat-main__form__new__form-box__content', placeholder: 'type a content'
+      = f.label :image, class: 'chat-main__form__new__form-box__input__label',multiple: 'multiple' do
+        画像を選択してください（絵を書く方はダウンロードボタンで書いた絵を読み込みこちらに指定してください）
       = f.file_field :image, class: 'chat-main__form__new__form-box__input__label__image'
+      = f.hidden_field :user_id, value: current_user.id
     = f.label :category, 'カテゴリ'
     %br
     = f.collection_check_boxes(:category_ids, Category.all, :id, :title) do |category|\
@@ -29,6 +30,7 @@
     %input#clear{type: "button", value: "clear"}
     %a.white#eraser-button{"data-color": "255, 255, 255, 255", href:""}部分消し
     %a#download{download: "canvas.jpg", href: "#"} ダウンロード
-    #result
-    %img{src:  ""}/
-    = f.submit 'Send', class: 'chat-main__form__new__submit-btn'
+    %br
+    %a.backroot{href: "/"}投稿一覧に戻る
+    = f.submit 'Send',id: "submit", class: 'chat-main__form__new__submit-btn'
+  

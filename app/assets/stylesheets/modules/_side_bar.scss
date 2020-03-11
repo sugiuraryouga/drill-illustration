@@ -14,11 +14,34 @@
     color: white;
     margin-top:20px;
     &__category{
-      &__title{
-        font-size: 20px;
-        text-align: center;
-
+      &__titles{
+        font-size: 30px;
+        margin-left: 20px;
+        &__title{
+          font-size: 30px;
+          color: white;
+        }
+        &__post{
+          font-size: 20px;
+          margin-left: 20px;
+          &__title{
+            color: peachpuff;
+          }
+        }
       }
+    }
+  }
+  &__category{
+    overflow: scroll;
+    margin: 10px auto;
+    color: white;
+    margin-top:20px;
+    &__title{
+      font-size: 30px;
+    }
+    &__post{
+      font-size: 20px;
+      margin-left: 20px;
     }
   }
 }
