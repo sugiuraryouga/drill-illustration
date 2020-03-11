@@ -27,10 +27,10 @@
         %a.small{"data-bold": "1", href: ""} 小
         %a.middle{"data-bold": "5",href: ""} 中
         %a.large{"data-bold": "10", href: ""} 大
+    %input#clear{type: "button", value: "clear"}
     %a.white#eraser-button{"data-color": "255, 255, 255, 255", href:""}部分消し
     %a#download{download: "canvas.jpg", href: "#"} ダウンロード
-    %input#clear{type: "button", value: "全消し"}
     %br
-    %a.btn{href: "/"}投稿一覧に戻る
+    %a.backroot{href: "/"}投稿一覧に戻る
     = f.submit 'Send',id: "submit", class: 'chat-main__form__new__submit-btn'
   

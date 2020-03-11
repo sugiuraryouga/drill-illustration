@@ -2,7 +2,7 @@
   .chat-main__header
     今日の議題
     %br 
-    　　　#{@post.title}
+    　#{@post.title}
   .chat-main__main 
     .chat-main__main__content
       詳細説明
@@ -12,6 +12,6 @@
       = image_tag @post.image.url,class: 'chat-main__main__image__font' if @post.image.present?
   - if user_signed_in? && current_user == @post.user
     .chat-main__edit
-      = link_to "#" do
+      = link_to edit_post_path(@post) do
         .chat-main__edit__form
           内容を編集する場合はクリック
