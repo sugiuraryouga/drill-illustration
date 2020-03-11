@@ -1,15 +1,20 @@
 class CategorysController < ApplicationController
   def index
    @categorys=Category.all
+   
   end
 
   # ここ以下は管理者のみのadminにする
   def new
-    @post = Category.new
+    @category = Category.new
   end
 
   def create
-    Post.create(category_params)
+    Category.create(category_params)
+  end
+
+  def show
+    @category=Category.find(params[:id])
   end
 
   private

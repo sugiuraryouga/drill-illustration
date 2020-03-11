@@ -1,4 +1,5 @@
 $(function(){
+if($('#canvas').length){
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -33,13 +34,18 @@ function draw(x, y) {
   // 初回処理の判定
   if (clickFlg == "1") {
     clickFlg = "2";
+    // 押した後elseの処理にするため
     ctx.beginPath();
+  // 前のパスを空にする
     ctx.lineCap = "round";  //　線を角丸にする
     ctx.moveTo(x, y);
+    // 開始地点を(e.offsetX, e.offsetY)に設定
   } else {
     ctx.lineTo(x, y);
+    // 直前の座標と指定座標を結ぶ直線を引く
   }
   ctx.stroke();
+  // 線を描く
 };
 
 // 色の変更
@@ -78,4 +84,5 @@ function setBgColor(){
   ctx.fillRect(0,0,cnvWidth,cnvHeight);
   // canvas背景の塗り潰し
 };
+}
 })
