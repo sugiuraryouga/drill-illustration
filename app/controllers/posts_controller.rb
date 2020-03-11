@@ -8,14 +8,23 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
-    Post.create!(post_params)
+    @post.create!(post_params)
   end
 
 
   def show
     @categorys=Category.all
-    @post = Post.find(params[:id])
+    # @post = Post.find(params[:id]) set_postで定義済み
+  end
+ 
+  def edit
+    @categorys=Category.all
+  # @post = Post.find(params[:id])set_postで定義済み
+  end
+
+  def update
+    @post = Post.find(params[:id]) 
+    @post.update(post_params)
   end
 
   private
