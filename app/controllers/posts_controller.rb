@@ -4,11 +4,11 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:show]
   
   def new
-    @post = Post.new
+    @post= Post.new
   end
 
   def create
-    @post.create!(post_params)
+    Post.create(post_params)
   end
 
 

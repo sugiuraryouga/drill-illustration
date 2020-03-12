@@ -4,6 +4,11 @@
   .header__search
     .header__right__search
       インクルメンタルサーチpost検索
+  -if current_user.try(:admin?)
+    .admin__form
+      =link_to "/admin" do
+        管理
+
   .header__right 
     - if user_signed_in?
       .user_nav.grid-6
