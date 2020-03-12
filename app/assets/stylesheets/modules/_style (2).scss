@@ -85,7 +85,7 @@ a {
 
 .btn {
     // @include basePadding(8px 20px);
-    font-size: 14px;
+    font-size: 20px;
     border: 2px solid $accent;
     color: $accent;
     font-weight: bold;
@@ -318,6 +318,8 @@ div.contents.row {
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
+    height: 300px;
+    padding-top: 100px;
     h3 {
       // @include baseMargin;
     }
