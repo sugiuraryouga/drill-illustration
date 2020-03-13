@@ -8,4 +8,10 @@ class Post < ApplicationRecord
   # mount_uploader :canvas_image, ImageUploader
   mount_uploader :image, ImageUploader
   
+
+
+  def self.search(search)
+    return Post.all unless search
+    Post.where('title LIKE(?)', "%#{search}%")
+  end
 end

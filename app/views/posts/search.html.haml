@@ -1,0 +1,9 @@
+= render "header"
+.wrapper
+ = render "side-bar"
+ .chat-main
+  -@posts.each do |post|
+   .chat-main__post
+    = link_to post_path(post) do
+     .chat-main__post__title
+      ="・ #{post.title}"
