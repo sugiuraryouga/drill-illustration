@@ -2,8 +2,9 @@
   .header__logo
     =link_to "self-drill",root_path
     = form_with(url: search_posts_path, local: true, method: :get, class: "header__search") do |form| 
-      = form.text_field :keyword, placeholder: "投稿を検索する", class: "header__search__post" 
+      = form.text_field :keyword, placeholder: "投稿を検索する", id: "post_search",class: "header__search__post" 
       = form.submit "検索", class: "header__search__btn" 
+    .header__logo__result
   .header__right 
     .header__right__any
       - if user_signed_in?
