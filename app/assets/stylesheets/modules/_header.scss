@@ -7,9 +7,30 @@
   line-height: 60px;
   &__logo{
     font-size: 30px;
+    display: flex;
+  }
+  &__search{
+    font-size: 20px;
+    display: flex;
+    width: 50vw;
+    &__post{
+      width: 85%;
+      height: 66%;
+      margin: auto 10px auto 150px; 
+    }
+    &__btn{
+      width: 15%;
+      height: 66%;
+      margin: auto;
+    }
   }
   &__right{
     margin-right: 20px;
+    display: flex;
+    &__any{
+      margin-right: 30px;
+    }
   }
+
   
 }
