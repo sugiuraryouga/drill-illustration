@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
   before_action :set_category, only: [:edit, :show,:search]
-  before_action :move_to_index, except: [:show,:search]
+  before_action :move_to_index, except: [:show,:search,:auto_complete]
   
 
   def new
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def show
     # @categorys=Category.all
-    # @post = Post.find(params[:id]) set_postで定義済み
+    # @post = Post.find(params[:id]) 
   end
  
   def edit
@@ -31,7 +31,11 @@ class PostsController < ApplicationController
   def search
     # @categorys=Category.all
     @posts = Post.search(params[:keyword])
+
   end
+
+
+
 
   private
   def post_params
