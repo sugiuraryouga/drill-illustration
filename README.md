@@ -9,7 +9,7 @@
  作成した図はダウンロードできるので自由に活用してください。
 ***デモ***
 
-https://github.com/sugiuraryouga/drill-illustration/issues/9#issue-598256323
+https://user-images.githubusercontent.com/61176802/79043656-62292600-7c3b-11ea-89b6-db7287cc416d.gif
  
 ## 機能
  
