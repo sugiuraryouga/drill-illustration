@@ -53,3 +53,36 @@
   }
 
 }
+.like{
+  display: block;
+  &__btn{
+    color: #57C3E9;
+    border: solid 3px;
+    font-size: 20px;
+    background-color: white;
+    border-radius:10px;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: 300px;
+    margin-top: 20px;
+    &__like{
+      color: #57C3E9;
+    border: solid 3px;
+    font-size: 20px;
+    background-color: blue;
+    border-radius:10px;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: 300px;
+    margin-top: 20px;
+    }
+  }
+}

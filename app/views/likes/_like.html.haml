@@ -1,0 +1,6 @@
+- if current_user != @post.user
+  %span#like
+    - if @post.iine?(current_user)
+      = link_to "いいね中 #{@post.likes.count}",like_path(@post),method: :delete,class:'like__btn__like',remote: true
+    - else
+      = link_to 'いいね',likes_path(post_id: @post.id),method: :post,class:'like__btn',remote: true

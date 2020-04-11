@@ -29,7 +29,7 @@
 //     var base64 = canvas.toDataURL();
 //     // 出力テスト
 //     form_data.append( "canvas_image" , base64  )
-//     console.log(form_data)
+//     console.log()
 //     var url = $(this).attr('action')
 //     $.ajax({
 //       url: url,
