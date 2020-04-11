@@ -347,6 +347,7 @@ form {
     color: #666;
     border: 0;
     font-size: 18px;
+    height: 40px;
     &:hover {
       background-color: lighten($accent, 10%);
     }

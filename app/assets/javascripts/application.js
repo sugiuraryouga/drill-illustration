@@ -14,7 +14,6 @@
 //= require jquery_ujs 
 //= require jquery-ui/widgets/autocomplete
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 
 

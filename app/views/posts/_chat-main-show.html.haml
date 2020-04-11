@@ -12,6 +12,7 @@
       　#{@post.content}
     .chat-main__main__image
       = image_tag @post.image.url,class: 'chat-main__main__image__font' if @post.image.present?
+  = render "likes/like", post: @post
   - if user_signed_in? && current_user == @post.user
     .chat-main__edit
       = link_to edit_post_path(@post) do

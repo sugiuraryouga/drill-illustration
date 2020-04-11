@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end  
-
     # 7つのアクションのみで作りたい場合はcontrolerに新しいディレクトリ rails g controller tweets::searches（検索する対象・・・今回ならpostsディレクトリを作ってsearches_controller.rbを設置）
     # 上のcollection の代わりに下記を利用
     # namespace :tweets do
     #   resources :searches, only: :index
     # end
   end
+  resources :likes, only: [:create, :destroy]
 end
