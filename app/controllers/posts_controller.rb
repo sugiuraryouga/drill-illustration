@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
   before_action :set_category, only: [:edit, :show,:search]
-  before_action :move_to_index, except: [:show,:search,:auto_complete]
+ 
   
 
   def new
+   if user_signed_in?
     @post= Post.new
+   else
+    redirect_to controller: :categorys,action: :index
+   end
   end
 
   def create
@@ -46,9 +50,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id]) 
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
+  
 
   def set_category
     @categorys=Category.all
